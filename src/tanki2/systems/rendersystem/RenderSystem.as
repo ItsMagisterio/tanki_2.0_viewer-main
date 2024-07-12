@@ -130,7 +130,7 @@ package tanki2.systems.rendersystem
                this.followCameraController.initCameraComponents();
                this.followCameraController.activate();
                this.setCameraController(this.followCameraController);
-               this.viewport.debugPanel.printValue("Режим камеры","следующий");
+               this.viewport.debugPanel.printValue("Camera mode","following");
             }
          }
          else
@@ -139,7 +139,7 @@ package tanki2.systems.rendersystem
             this.followCameraController.setTarget(null);
             this.freeCameraController.updateObjectTransform();
             this.setCameraController(this.freeCameraController);
-            this.viewport.debugPanel.printValue("Режим камеры","свободный");
+            this.viewport.debugPanel.printValue("Camera mode","free");
          }
       }
    }

@@ -161,7 +161,7 @@ package tanki2.vehicles.tank.skin
          _hullMesh.addChild(this.leftTrackSkin.track);
          _hullMesh.addChild(this.rightTrackSkin.track);
          
-         for each (var wheel in this.leftTrackSkin.wheels.concat(this.rightTrackSkin.wheels)) 
+         for each (var wheel:Mesh in this.leftTrackSkin.wheels.concat(this.rightTrackSkin.wheels)) 
          {
             _hullMesh.addChild(wheel);
          }
@@ -173,7 +173,7 @@ package tanki2.vehicles.tank.skin
          this.container.removeChild(this.leftTrackSkin.track);
          this.container.removeChild(this.rightTrackSkin.track);
          
-         for each (var wheel in this.leftTrackSkin.wheels.concat(this.rightTrackSkin.wheels)) 
+         for each (var wheel:Mesh in this.leftTrackSkin.wheels.concat(this.rightTrackSkin.wheels)) 
          {
             this.container.removeChild(wheel);
          }

@@ -1,6 +1,6 @@
 package tanki2.physics
 {
-   class MinMax
+   public class MinMax
    {
        
       

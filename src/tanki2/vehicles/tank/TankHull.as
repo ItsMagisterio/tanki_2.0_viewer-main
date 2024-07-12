@@ -65,6 +65,7 @@ package tanki2.vehicles.tank
       {
          object.removeChildren(0);
          
+         // Uncomment and modify as necessary to add children correctly.
          //for each (var wheel:Object3D in this.leftWheels.concat(this.rightWheels)) 
          //{
          //   object.addChild(wheel);
@@ -79,14 +80,14 @@ package tanki2.vehicles.tank
       
       private function addTracks(object:Object3D):void 
       {
-         for each (var wheelObject:Object3D in Utils3D.findChildsWithNameBeginning(object, "whR")) 
+         for each (var rightWheelObject:Object3D in Utils3D.findChildsWithNameBeginning(object, "whR")) 
          {
-            this.rightWheels.push(Mesh(wheelObject));
+            this.rightWheels.push(Mesh(rightWheelObject));
          }
          
-         for each (var wheelObject:Object3D in Utils3D.findChildsWithNameBeginning(object, "whL")) 
+         for each (var leftWheelObject:Object3D in Utils3D.findChildsWithNameBeginning(object, "whL")) 
          {
-            leftWheels.push(Mesh(wheelObject));
+            this.leftWheels.push(Mesh(leftWheelObject));
          }
          
          this.leftTrack = Skin(object.getChildByName("LTrack"));

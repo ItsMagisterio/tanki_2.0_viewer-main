@@ -1,6 +1,6 @@
 package tanki2.utils.list
 {
-   class ListItem
+   public class ListItem
    {
        
       

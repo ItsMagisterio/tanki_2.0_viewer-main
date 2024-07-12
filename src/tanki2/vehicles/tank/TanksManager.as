@@ -11,8 +11,9 @@ package tanki2.vehicles.tank
    import tanki2.display.DebugPanel;
    import tanki2.vehicles.tank.physics.TankPhysicsData;
    import tanki2.vehicles.tank.physics.TankPhysicsVisualizer;
-	/**
-    * ...
+
+   /**
+    * Tanks Manager class for managing tanks in the game
     * @author juhe
     */
    public class TanksManager
@@ -28,7 +29,7 @@ package tanki2.vehicles.tank
       
       private var ownTank:Tank;
       
-      private var debugPanel:DebugPanel
+      private var debugPanel:DebugPanel;
       
       private var userTankController:UserTankController;
       
@@ -66,19 +67,19 @@ package tanki2.vehicles.tank
       
       private function printWeaponName() : void
       {
-         this.debugPanel.printValue("Тип пушек",this.currentTank().getWeapon().name);
+         this.debugPanel.printValue("Weapon Type", this.currentTank().getWeapon().name);
       }
       
       private function printWeaponEffectsName() : void
       {
-         this.debugPanel.printValue("Пушка",this.currentTank().getWeapon().getEffectsName());
+         this.debugPanel.printValue("Weapon", this.currentTank().getWeapon().getEffectsName());
       }
       
       public function loadTanksFromJson(jsonString:String):void 
       {
          var json:Object = JSON.parse(jsonString);
          
-         for each (var tankData in json.tanks) 
+         for each (var tankData:Object in json.tanks) 
          {
             var tankPhysicsData:TankPhysicsData = new TankPhysicsData();
             tankPhysicsData.setDataFromJsonObject(tankData.physicsData);
@@ -87,7 +88,7 @@ package tanki2.vehicles.tank
             tankHull.physicsProfiles.push(tankPhysicsData);
             
             var tankTurret:TankTurret = this.tankResourcesLoader.getTurretByName(tankData.turretName);
-            var colormap:BitmapData = this.tankResourcesLoader.getColormapByName(tankData.colormapName)
+            var colormap:BitmapData = this.tankResourcesLoader.getColormapByName(tankData.colormapName);
             
             this.createTank(tankData.name, tankHull, tankTurret, colormap);
          }

@@ -275,10 +275,10 @@ class BeamMaterialProgram extends ShaderProgram {
 
 	public var aPosition:int = -1;
 	public var aUV:int = -1;
-   public var aNormal = -1;
+   public var aNormal:int = -1; //add int
 	public var cProjMatrix:int = -1;
    public var cZone:int = -1;
-   public var cCameraPos = -1;
+   public var cCameraPos:int = -1; //add int
 	public var sTexture:int = -1;
 
 	public function BeamMaterialProgram(vertex:Linker, fragment:Linker) {

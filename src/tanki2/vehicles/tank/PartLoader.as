@@ -13,9 +13,9 @@ package tanki2.vehicles.tank
    import alternativa.engine3d.loaders.ParserCollada;
    import flash.utils.ByteArray;
    
-	/**
-    * ...
-    * @author juhe
+   /**
+    * ... 
+    * author juhe
     */
    public class PartLoader extends EventDispatcher
    {
@@ -49,7 +49,7 @@ package tanki2.vehicles.tank
          this.loadTextures(this.path, this.textureNames);
       }
       
-      private function loadTextures(path, textureNames):void 
+      private function loadTextures(path:String, textureNames:Vector.<String>):void 
       {
          // TODO: maybe start using ExternalTextureResource, because it supports every type, not only atf
          
@@ -113,23 +113,23 @@ package tanki2.vehicles.tank
       
       private function onColladaLoad(e:Event):void
       {
-			var parser:ParserCollada = new ParserCollada();
-			parser.parse(XML((e.target as URLLoader).data));
+         var parser:ParserCollada = new ParserCollada();
+         parser.parse(XML((e.target as URLLoader).data));
          
          this.part.object = this.findMainObject(parser.objects);
          this.objectLoaded = true;
          this.loadingDoneCheck();
-		}
+      }
       
       private function onA3DLoad(e:Event):void
       {
-			var parser:ParserA3D = new ParserA3D();
-			parser.parse((e.target as URLLoader).data);
+         var parser:ParserA3D = new ParserA3D();
+         parser.parse((e.target as URLLoader).data);
          
          this.part.object = this.findMainObject(parser.objects);
          this.objectLoaded = true;
          this.loadingDoneCheck();
-		}
+      }
       
       private function findMainObject(objects:Vector.<Object3D>):Object3D 
       {
@@ -140,9 +140,8 @@ package tanki2.vehicles.tank
                return object;
             }
          }
-         return null
+         return null;
       }
       
    }
-
 }

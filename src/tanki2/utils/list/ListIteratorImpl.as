@@ -3,7 +3,7 @@ package tanki2.utils.list
    import tanki2.utils.list.errors.ConcurrentModificationError;
    import tanki2.utils.list.errors.NoSuchElementError;
    
-   class ListIteratorImpl implements ListIterator
+   public class ListIteratorImpl implements ListIterator
    {
        
       

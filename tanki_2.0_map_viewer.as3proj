@@ -12,7 +12,7 @@
     <movie minorVersion="0" />
     <movie platform="Flash Player" />
     <movie background="#FFFFFF" />
-    <movie preferredSDK="D:\juho1\tankkin_modaus\united_tanks\jounku_toisen_sourcet\SDK" />
+    <movie preferredSDK="C:\Users\Bodya\Documents\flex_sdk_4.6.0.23201" />
   </output>
   <!-- Other classes to be compiled into your SWF -->
   <classpaths>

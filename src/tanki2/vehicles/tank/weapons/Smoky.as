@@ -30,7 +30,7 @@ package tanki2.vehicles.tank.weapons
       
       public function Smoky()
       {
-         super("Средне-дальнобойные");
+         super("Medium-range");
       }
       
       override public function update(time:int, delta:int) : void

@@ -4,11 +4,11 @@ package tanki2.utils.list
    {
        
       
-      var head:ListItem;
+	  public var head:ListItem;
       
-      var tail:ListItem;
+      public var tail:ListItem;
       
-      var changeCounter:int;
+      public var changeCounter:int;
       
       public function List()
       {

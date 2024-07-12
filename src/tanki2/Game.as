@@ -58,7 +58,7 @@ package tanki2
       
       public var stage:Stage;
       
-      var debugPanel:DebugPanel;
+      public var debugPanel:DebugPanel;
       
       private const taskManager:TaskManager = new TaskManager();
       

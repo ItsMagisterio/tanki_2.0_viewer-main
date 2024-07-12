@@ -10,10 +10,7 @@ package tanki2.vehicles.tank
    import flash.events.Event;
    import flash.events.EventDispatcher;
    import flash.net.URLRequest;
-	/**
-    * ...
-    * @author juhe
-    */
+   
    public class TankResourcesLoader extends EventDispatcher
    {
       
@@ -64,11 +61,11 @@ package tanki2.vehicles.tank
          this.loadColormaps(json);
       }
       
-      private function loadColormaps(json):void 
+      private function loadColormaps(json:Object):void 
       {
          this.colormapCount = json.colormaps.length;
          
-         for each (var colorMapData in json.colormaps) 
+         for each (var colorMapData:Object in json.colormaps) 
          {
             var loader:Loader = new Loader();
             loader.contentLoaderInfo.addEventListener(Event.COMPLETE, function (e:Event):void 
@@ -97,10 +94,10 @@ package tanki2.vehicles.tank
       
       private function loadTurretsFromJson(json:Object):void 
       {
-         var turrets:Object = json.turrets;
+         var turrets:Array = json.turrets;
          this.turretCount = turrets.length;
          
-         for each (var turretObject in turrets) 
+         for each (var turretObject:Object in turrets) 
          {
             var turretTextureNames:Vector.<String> = this.stringArrayToVector(turretObject.textureNames);
             var turretLoader:PartLoader = new PartLoader(turretObject.path, turretTextureNames, "turret.a3d");
@@ -109,7 +106,7 @@ package tanki2.vehicles.tank
          }
       }
       
-      private function onTurretTankPartLoaded(e:Event, turretName):void 
+      private function onTurretTankPartLoaded(e:Event, turretName:String):void 
       {
          var partLoader:PartLoader = PartLoader(e.target);
          var part:Part = partLoader.part;
@@ -130,7 +127,7 @@ package tanki2.vehicles.tank
       
       private function loadHullsFromJson(json:Object):void 
       {
-         var hulls:Object = json.hulls;
+         var hulls:Array = json.hulls;
          this.hullCount = hulls.length;
          
          for each (var hullObject:Object in hulls) 
@@ -167,7 +164,7 @@ package tanki2.vehicles.tank
       private function stringArrayToVector(array:Array):Vector.<String>
       {
          var strings:Vector.<String> = new Vector.<String>();
-         for each (var string in array) 
+         for each (var string:String in array) 
          {
             strings.push(string);
          }
