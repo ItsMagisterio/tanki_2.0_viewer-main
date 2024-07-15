@@ -39,7 +39,7 @@ package tanki2.vehicles.tank
          this.tankResourcesLoader = tankResourcesLoader;
          this.game = game;
          this.tanks = new Vector.<Tank>();
-         this.userTankController = new UserTankController(game.stage);
+         this.userTankController = new UserTankController(game.getStage()); // Используем геттер
       }
       
       public function numTanks():int
