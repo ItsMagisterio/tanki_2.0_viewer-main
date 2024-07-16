@@ -1,0 +1,21 @@
+{
+   "tanks": [
+      {
+         "nickname": "test123",
+         "hullName": "viking m1",
+         "turretName": "thunder m3",
+         "colormapName": "flora",
+         "physicsData": {
+            "mass": 1600,
+            "power": 209900,
+            "maxForwardSpeed": 1300,
+            "maxBackwardSpeed": 1300,
+            "maxTurnSpeed": 0.001,
+            "springDamping": 900,
+            "dynamicFriction": 0.5,
+            "brakeFriction": 0.9,
+            "sideFriction": 4
+         }
+      }
+   ]
+}

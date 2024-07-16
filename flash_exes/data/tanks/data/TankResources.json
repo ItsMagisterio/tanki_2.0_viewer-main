@@ -1,0 +1,45 @@
+{
+   "hulls": [
+      {
+         "name": "viking m1",
+         "path": "data/dxt1/tanks/hulls/viking/m1",
+         "textureNames": [
+            "diffuse",
+            "normalmap",
+            "shadow",
+            "surface",
+            "tracks_diffuse",
+            "tracks_normalmap"
+         ]
+      },
+      {
+         "name": "wasp m2",
+         "path": "data/dxt1/tanks/hulls/wasp/m2",
+         "textureNames": [
+            "diffuse",
+            "normalmap",
+            "shadow",
+            "surface",
+            "tracks_diffuse",
+            "tracks_normalmap"
+         ]
+      }
+   ],
+   "turrets": [
+      {
+         "name": "thunder m3",
+         "path": "data/dxt1/tanks/turrets/thunder/m3",
+         "textureNames": [
+            "diffuse",
+            "normalmap",
+            "surface"
+         ]
+      }
+   ],
+   "colormaps": [
+      {
+         "name": "flora",
+         "path": "data/tanks/colormaps/flora.jpg"
+      }
+   ]
+}

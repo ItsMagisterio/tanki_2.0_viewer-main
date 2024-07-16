@@ -52,7 +52,7 @@ package tanki2 {
             this.stage = stage;
             this.stage3D = stage3D;
             instance = this;
-            loadMap("resources/maps/arena-a3d.tara");
+            loadMap("data/dxt1/maps/arena-a3d.tara");
             FogUtils.setFog("45:0xffac5a 135:0x786d5d 225:0x00355f 315:0x786d5d", 100, 40000, 0.5);
         }
 
@@ -121,7 +121,7 @@ package tanki2 {
         private function loadTankResources():void {
             var loader:URLLoader = new URLLoader();
             loader.addEventListener(Event.COMPLETE, this.onTankResourcesLoaded);
-            loader.load(new URLRequest("resources/tank.data/TankResources.json"));
+            loader.load(new URLRequest("data/tanks/data/TankResources.json"));
         }
 
         private function onTankResourcesLoaded(e:Event):void {
@@ -160,7 +160,7 @@ package tanki2 {
         private function addTank():void {
             var loader:URLLoader = new URLLoader();
             loader.addEventListener(Event.COMPLETE, this.onUserJsonLoaded);
-            loader.load(new URLRequest("resources/tank.data/User.json"));
+            loader.load(new URLRequest("data/tanks/data/User.json"));
         }
 
         private function onUserJsonLoaded(e:Event):void {
