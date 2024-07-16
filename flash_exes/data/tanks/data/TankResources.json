@@ -23,33 +23,12 @@
             "tracks_diffuse",
             "tracks_normalmap"
          ]
-      },
-      {
-         "name": "mamont m3",
-         "path": "data/dxt1/tanks/hulls/mamont/m3",
-         "textureNames": [
-            "diffuse",
-            "normalmap",
-            "shadow",
-            "surface",
-            "tracks_diffuse",
-            "tracks_normalmap"
-         ]
       }
    ],
    "turrets": [
       {
          "name": "thunder m3",
          "path": "data/dxt1/tanks/turrets/thunder/m3",
-         "textureNames": [
-            "diffuse",
-            "normalmap",
-            "surface"
-         ]
-      },
-	  {
-         "name": "firebird m1",
-         "path": "data/dxt1/tanks/turrets/firebird/m1",
          "textureNames": [
             "diffuse",
             "normalmap",
@@ -70,14 +49,6 @@
       {
          "name": "flora",
          "path": "data/tanks/colormaps/flora.jpg"
-      },
-      {
-         "name": "swamp",
-         "path": "data/tanks/colormaps/swamp.jpg"
-      },
-      {
-         "name": "winter",
-         "path": "data/tanks/colormaps/winter.jpg"
       }
    ]
 }
